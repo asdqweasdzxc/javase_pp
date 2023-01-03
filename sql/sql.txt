@@ -1,0 +1,22 @@
+CREATE TABLE category(
+category_idx NUMBER PRIMARY KEY
+, category_name varchar2(100)
+);
+
+CREATE SEQUENCE seq_category
+INCREMENT BY 1
+START WITH 1;
+
+
+create table product(
+product_idx number primary KEY
+, category_idx number
+, name varchar2(100)
+, price number DEFAULT 0
+, hit number default 0
+, constraint  fk_category_product foreign key (category_idx) references category(category_idx)
+);
+
+CREATE SEQUENCE seq_product
+INCREMENT BY 1
+START WITH 1;
