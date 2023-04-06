@@ -21,7 +21,7 @@ public class AdminMain extends JFrame{
 	AddProduct addProduct;
 	PaymentPage paymentPage;
 	
-	JPanel p_container = new JPanel(); //페이지를 담을 판넬
+	JPanel p_container = new JPanel();
 	JPanel p_south = new JPanel();
 	
 	Page[] page = new Page[6];
@@ -86,7 +86,6 @@ public class AdminMain extends JFrame{
 		addCategory=(AddCategory) page[3];
 		addProduct=(AddProduct) page[4];
 		paymentPage=(PaymentPage) page[5];
-		//중앙패널에 부착
 		for(int i=0;i<page.length;i++) {
 			p_container.add(page[i]);
 		}
@@ -97,7 +96,6 @@ public class AdminMain extends JFrame{
 		menu[1]=new Menu("재고 관리", this, STOCKPAGE);
 		menu[2]=new Menu("매장 분석", this, ANALYSISPAGE);
 		
-		//하단 판넬에 메뉴 부착
 		for(int i=0;i<menu.length;i++) {
 			p_south.add(menu[i]);
 			menu[i].setBounds(400*i, 0, 400, 50);

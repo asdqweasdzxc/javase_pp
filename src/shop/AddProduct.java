@@ -111,7 +111,7 @@ public class AddProduct extends Page{
 		createCombo();
 		createProduct();
 		
-		//등록버튼과 리스너 연결
+		//�벑濡앸쾭�듉怨� 由ъ뒪�꼫 �뿰寃�
 		bt_regist.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				regist();
@@ -120,11 +120,11 @@ public class AddProduct extends Page{
 		
 		bt_list.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				//데이터베이스 목록 가져오기 + 화면전환
+				//�뜲�씠�꽣踰좎씠�뒪 紐⑸줉 媛��졇�삤湲� + �솕硫댁쟾�솚
 				ProductPage ProductPage = (ProductPage)adminMain.page[AdminMain.PRODUCTPAGE];
-				ProductPage.getList(); //db갱신
+				ProductPage.getList(); //db媛깆떊
 				
-				adminMain.showHide(AdminMain.PRODUCTPAGE); //화면전환
+				adminMain.showHide(AdminMain.PRODUCTPAGE); //�솕硫댁쟾�솚
 			}
 		});
 		
@@ -188,7 +188,6 @@ public class AddProduct extends Page{
 		}
 	}
 	
-	//카테고리2에서 오류 발생... (프로덕트와 연결되어 있다)
 	public void createCombo() {
 		c_category.removeAllItems();
 		c_product.removeAllItems();
@@ -208,6 +207,9 @@ public class AddProduct extends Page{
 	public void createProduct() {
 		category_index2 = c_category2.getSelectedIndex();
 		System.out.println("category_index2="+category_index2);
+		if(category_index2==-1) {
+			return;
+		}
 		productList=(ArrayList<Product>)adminMain.productDAO.select(categoryList.get(category_index2).getCategory_idx());
 		c_product.removeAllItems();
 		for(int i=0;i<productList.size();i++) {

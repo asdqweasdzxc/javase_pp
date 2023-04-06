@@ -1,0 +1,509 @@
+!SESSION 2023-04-06 14:09:33.444 -----------------------------------------------
+eclipse.buildId=4.24.0.I20220607-0700
+java.version=17.0.5
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ko_KR
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.equinox.simpleconfigurator 4 0 2023-04-06 14:09:33.827
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Exception in org.eclipse.equinox.internal.simpleconfigurator.Activator.start() of bundle org.eclipse.equinox.simpleconfigurator.
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.startActivator(BundleContextImpl.java:835)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.start(BundleContextImpl.java:763)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.startWorker0(EquinoxBundle.java:1028)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.startWorker(EquinoxBundle.java:371)
+	at org.eclipse.osgi.container.Module.doStart(Module.java:605)
+	at org.eclipse.osgi.container.Module.start(Module.java:468)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel$2.run(ModuleContainer.java:1849)
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor$1$1.execute(EquinoxContainerAdaptor.java:136)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1842)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1785)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1747)
+	at org.eclipse.osgi.container.SystemModule.startWorker(SystemModule.java:269)
+	at org.eclipse.osgi.container.Module.doStart(Module.java:605)
+	at org.eclipse.osgi.container.Module.start(Module.java:468)
+	at org.eclipse.osgi.container.SystemModule.start(SystemModule.java:193)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.start(EquinoxBundle.java:445)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.start(EquinoxBundle.java:464)
+	at org.eclipse.osgi.launch.Equinox.start(Equinox.java:139)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.startup(EclipseStarter.java:338)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:251)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:654)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:591)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1462)
+Caused by: java.lang.IllegalStateException: The System Bundle was updated. The framework must be restarted to finalize the configuration change
+	at org.eclipse.equinox.internal.simpleconfigurator.ConfigApplier.install(ConfigApplier.java:79)
+	at org.eclipse.equinox.internal.simpleconfigurator.SimpleConfiguratorImpl.applyConfiguration(SimpleConfiguratorImpl.java:189)
+	at org.eclipse.equinox.internal.simpleconfigurator.SimpleConfiguratorImpl.applyConfiguration(SimpleConfiguratorImpl.java:204)
+	at org.eclipse.equinox.internal.simpleconfigurator.Activator.start(Activator.java:64)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$2.run(BundleContextImpl.java:814)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$2.run(BundleContextImpl.java:1)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:569)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.startActivator(BundleContextImpl.java:806)
+	... 26 more
+Root exception:
+java.lang.IllegalStateException: The System Bundle was updated. The framework must be restarted to finalize the configuration change
+	at org.eclipse.equinox.internal.simpleconfigurator.ConfigApplier.install(ConfigApplier.java:79)
+	at org.eclipse.equinox.internal.simpleconfigurator.SimpleConfiguratorImpl.applyConfiguration(SimpleConfiguratorImpl.java:189)
+	at org.eclipse.equinox.internal.simpleconfigurator.SimpleConfiguratorImpl.applyConfiguration(SimpleConfiguratorImpl.java:204)
+	at org.eclipse.equinox.internal.simpleconfigurator.Activator.start(Activator.java:64)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$2.run(BundleContextImpl.java:814)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$2.run(BundleContextImpl.java:1)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:569)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.startActivator(BundleContextImpl.java:806)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.start(BundleContextImpl.java:763)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.startWorker0(EquinoxBundle.java:1028)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.startWorker(EquinoxBundle.java:371)
+	at org.eclipse.osgi.container.Module.doStart(Module.java:605)
+	at org.eclipse.osgi.container.Module.start(Module.java:468)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel$2.run(ModuleContainer.java:1849)
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor$1$1.execute(EquinoxContainerAdaptor.java:136)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1842)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1785)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1747)
+	at org.eclipse.osgi.container.SystemModule.startWorker(SystemModule.java:269)
+	at org.eclipse.osgi.container.Module.doStart(Module.java:605)
+	at org.eclipse.osgi.container.Module.start(Module.java:468)
+	at org.eclipse.osgi.container.SystemModule.start(SystemModule.java:193)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.start(EquinoxBundle.java:445)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.start(EquinoxBundle.java:464)
+	at org.eclipse.osgi.launch.Equinox.start(Equinox.java:139)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.startup(EclipseStarter.java:338)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:251)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:654)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:591)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1462)
+
+!ENTRY org.eclipse.osgi 4 0 2023-04-06 14:09:34.255
+!MESSAGE Bundle org.eclipse.equinox.simpleconfigurator_1.4.0.v20210315-2228 [2] is not active.
+
+!ENTRY org.eclipse.jface 2 0 2023-04-06 14:09:46.431
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2023-04-06 14:09:46.431
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@3d5e3f58,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@615b1baf,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.ui.navigator 2 0 2023-04-06 14:09:50.371
+!MESSAGE Can't find Navigator Content Descriptor with id: org.eclipse.jst.servlet.ui.EnhancedJavaRendering
+
+!ENTRY org.eclipse.ui.navigator 2 0 2023-04-06 14:09:50.371
+!MESSAGE Can't find Navigator Content Descriptor with id: org.eclipse.jst.servlet.ui.EnhancedJavaRendering
+
+!ENTRY org.eclipse.egit.ui 2 0 2023-04-06 14:09:50.410
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\sangi'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2023-04-06 14:10:47.383 -----------------------------------------------
+eclipse.buildId=4.24.0.I20220607-0700
+java.version=17.0.5
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ko_KR
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.equinox.simpleconfigurator 4 0 2023-04-06 14:10:47.761
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Exception in org.eclipse.equinox.internal.simpleconfigurator.Activator.start() of bundle org.eclipse.equinox.simpleconfigurator.
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.startActivator(BundleContextImpl.java:835)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.start(BundleContextImpl.java:763)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.startWorker0(EquinoxBundle.java:1028)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.startWorker(EquinoxBundle.java:371)
+	at org.eclipse.osgi.container.Module.doStart(Module.java:605)
+	at org.eclipse.osgi.container.Module.start(Module.java:468)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel$2.run(ModuleContainer.java:1849)
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor$1$1.execute(EquinoxContainerAdaptor.java:136)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1842)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1785)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1747)
+	at org.eclipse.osgi.container.SystemModule.startWorker(SystemModule.java:269)
+	at org.eclipse.osgi.container.Module.doStart(Module.java:605)
+	at org.eclipse.osgi.container.Module.start(Module.java:468)
+	at org.eclipse.osgi.container.SystemModule.start(SystemModule.java:193)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.start(EquinoxBundle.java:445)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.start(EquinoxBundle.java:464)
+	at org.eclipse.osgi.launch.Equinox.start(Equinox.java:139)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.startup(EclipseStarter.java:338)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:251)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:654)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:591)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1462)
+Caused by: java.lang.IllegalStateException: The System Bundle was updated. The framework must be restarted to finalize the configuration change
+	at org.eclipse.equinox.internal.simpleconfigurator.ConfigApplier.install(ConfigApplier.java:79)
+	at org.eclipse.equinox.internal.simpleconfigurator.SimpleConfiguratorImpl.applyConfiguration(SimpleConfiguratorImpl.java:189)
+	at org.eclipse.equinox.internal.simpleconfigurator.SimpleConfiguratorImpl.applyConfiguration(SimpleConfiguratorImpl.java:204)
+	at org.eclipse.equinox.internal.simpleconfigurator.Activator.start(Activator.java:64)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$2.run(BundleContextImpl.java:814)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$2.run(BundleContextImpl.java:1)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:569)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.startActivator(BundleContextImpl.java:806)
+	... 26 more
+Root exception:
+java.lang.IllegalStateException: The System Bundle was updated. The framework must be restarted to finalize the configuration change
+	at org.eclipse.equinox.internal.simpleconfigurator.ConfigApplier.install(ConfigApplier.java:79)
+	at org.eclipse.equinox.internal.simpleconfigurator.SimpleConfiguratorImpl.applyConfiguration(SimpleConfiguratorImpl.java:189)
+	at org.eclipse.equinox.internal.simpleconfigurator.SimpleConfiguratorImpl.applyConfiguration(SimpleConfiguratorImpl.java:204)
+	at org.eclipse.equinox.internal.simpleconfigurator.Activator.start(Activator.java:64)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$2.run(BundleContextImpl.java:814)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$2.run(BundleContextImpl.java:1)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:569)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.startActivator(BundleContextImpl.java:806)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.start(BundleContextImpl.java:763)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.startWorker0(EquinoxBundle.java:1028)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.startWorker(EquinoxBundle.java:371)
+	at org.eclipse.osgi.container.Module.doStart(Module.java:605)
+	at org.eclipse.osgi.container.Module.start(Module.java:468)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel$2.run(ModuleContainer.java:1849)
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor$1$1.execute(EquinoxContainerAdaptor.java:136)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1842)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1785)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1747)
+	at org.eclipse.osgi.container.SystemModule.startWorker(SystemModule.java:269)
+	at org.eclipse.osgi.container.Module.doStart(Module.java:605)
+	at org.eclipse.osgi.container.Module.start(Module.java:468)
+	at org.eclipse.osgi.container.SystemModule.start(SystemModule.java:193)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.start(EquinoxBundle.java:445)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.start(EquinoxBundle.java:464)
+	at org.eclipse.osgi.launch.Equinox.start(Equinox.java:139)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.startup(EclipseStarter.java:338)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:251)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:654)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:591)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1462)
+
+!ENTRY org.eclipse.osgi 4 0 2023-04-06 14:10:48.178
+!MESSAGE Bundle org.eclipse.equinox.simpleconfigurator_1.4.0.v20210315-2228 [2] is not active.
+
+!ENTRY org.eclipse.jface 2 0 2023-04-06 14:10:50.535
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2023-04-06 14:10:50.535
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@225fb75e,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@61d9dd15,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.ui.navigator 2 0 2023-04-06 14:10:52.625
+!MESSAGE Can't find Navigator Content Descriptor with id: org.eclipse.jst.servlet.ui.EnhancedJavaRendering
+
+!ENTRY org.eclipse.ui.navigator 2 0 2023-04-06 14:10:52.626
+!MESSAGE Can't find Navigator Content Descriptor with id: org.eclipse.jst.servlet.ui.EnhancedJavaRendering
+
+!ENTRY org.eclipse.egit.ui 2 0 2023-04-06 14:10:52.649
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\sangi'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2023-04-06 14:11:09.497 -----------------------------------------------
+eclipse.buildId=4.24.0.I20220607-0700
+java.version=17.0.5
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ko_KR
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.equinox.simpleconfigurator 4 0 2023-04-06 14:11:09.872
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Exception in org.eclipse.equinox.internal.simpleconfigurator.Activator.start() of bundle org.eclipse.equinox.simpleconfigurator.
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.startActivator(BundleContextImpl.java:835)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.start(BundleContextImpl.java:763)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.startWorker0(EquinoxBundle.java:1028)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.startWorker(EquinoxBundle.java:371)
+	at org.eclipse.osgi.container.Module.doStart(Module.java:605)
+	at org.eclipse.osgi.container.Module.start(Module.java:468)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel$2.run(ModuleContainer.java:1849)
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor$1$1.execute(EquinoxContainerAdaptor.java:136)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1842)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1785)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1747)
+	at org.eclipse.osgi.container.SystemModule.startWorker(SystemModule.java:269)
+	at org.eclipse.osgi.container.Module.doStart(Module.java:605)
+	at org.eclipse.osgi.container.Module.start(Module.java:468)
+	at org.eclipse.osgi.container.SystemModule.start(SystemModule.java:193)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.start(EquinoxBundle.java:445)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.start(EquinoxBundle.java:464)
+	at org.eclipse.osgi.launch.Equinox.start(Equinox.java:139)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.startup(EclipseStarter.java:338)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:251)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:654)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:591)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1462)
+Caused by: java.lang.IllegalStateException: The System Bundle was updated. The framework must be restarted to finalize the configuration change
+	at org.eclipse.equinox.internal.simpleconfigurator.ConfigApplier.install(ConfigApplier.java:79)
+	at org.eclipse.equinox.internal.simpleconfigurator.SimpleConfiguratorImpl.applyConfiguration(SimpleConfiguratorImpl.java:189)
+	at org.eclipse.equinox.internal.simpleconfigurator.SimpleConfiguratorImpl.applyConfiguration(SimpleConfiguratorImpl.java:204)
+	at org.eclipse.equinox.internal.simpleconfigurator.Activator.start(Activator.java:64)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$2.run(BundleContextImpl.java:814)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$2.run(BundleContextImpl.java:1)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:569)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.startActivator(BundleContextImpl.java:806)
+	... 26 more
+Root exception:
+java.lang.IllegalStateException: The System Bundle was updated. The framework must be restarted to finalize the configuration change
+	at org.eclipse.equinox.internal.simpleconfigurator.ConfigApplier.install(ConfigApplier.java:79)
+	at org.eclipse.equinox.internal.simpleconfigurator.SimpleConfiguratorImpl.applyConfiguration(SimpleConfiguratorImpl.java:189)
+	at org.eclipse.equinox.internal.simpleconfigurator.SimpleConfiguratorImpl.applyConfiguration(SimpleConfiguratorImpl.java:204)
+	at org.eclipse.equinox.internal.simpleconfigurator.Activator.start(Activator.java:64)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$2.run(BundleContextImpl.java:814)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$2.run(BundleContextImpl.java:1)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:569)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.startActivator(BundleContextImpl.java:806)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.start(BundleContextImpl.java:763)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.startWorker0(EquinoxBundle.java:1028)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.startWorker(EquinoxBundle.java:371)
+	at org.eclipse.osgi.container.Module.doStart(Module.java:605)
+	at org.eclipse.osgi.container.Module.start(Module.java:468)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel$2.run(ModuleContainer.java:1849)
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor$1$1.execute(EquinoxContainerAdaptor.java:136)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1842)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1785)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1747)
+	at org.eclipse.osgi.container.SystemModule.startWorker(SystemModule.java:269)
+	at org.eclipse.osgi.container.Module.doStart(Module.java:605)
+	at org.eclipse.osgi.container.Module.start(Module.java:468)
+	at org.eclipse.osgi.container.SystemModule.start(SystemModule.java:193)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.start(EquinoxBundle.java:445)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.start(EquinoxBundle.java:464)
+	at org.eclipse.osgi.launch.Equinox.start(Equinox.java:139)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.startup(EclipseStarter.java:338)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:251)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:654)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:591)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1462)
+
+!ENTRY org.eclipse.osgi 4 0 2023-04-06 14:11:10.292
+!MESSAGE Bundle org.eclipse.equinox.simpleconfigurator_1.4.0.v20210315-2228 [2] is not active.
+
+!ENTRY org.eclipse.jface 2 0 2023-04-06 14:11:16.956
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2023-04-06 14:11:16.956
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@5a106b26,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@445d878c,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.ui.navigator 2 0 2023-04-06 14:11:18.897
+!MESSAGE Can't find Navigator Content Descriptor with id: org.eclipse.jst.servlet.ui.EnhancedJavaRendering
+
+!ENTRY org.eclipse.ui.navigator 2 0 2023-04-06 14:11:18.897
+!MESSAGE Can't find Navigator Content Descriptor with id: org.eclipse.jst.servlet.ui.EnhancedJavaRendering
+
+!ENTRY org.eclipse.egit.ui 2 0 2023-04-06 14:11:18.934
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\sangi'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.jdt.launching 4 4 2023-04-06 14:45:34.250
+!MESSAGE Xbootclasspath option have been removed as not supported beyond Java 8.
+
+!ENTRY org.eclipse.jdt.launching 4 4 2023-04-06 14:46:15.373
+!MESSAGE Xbootclasspath option have been removed as not supported beyond Java 8.
+
+!ENTRY org.eclipse.jdt.launching 4 4 2023-04-06 14:47:53.610
+!MESSAGE Xbootclasspath option have been removed as not supported beyond Java 8.
+
+!ENTRY org.eclipse.jdt.launching 4 4 2023-04-06 14:48:18.654
+!MESSAGE Xbootclasspath option have been removed as not supported beyond Java 8.
+
+!ENTRY org.eclipse.jdt.launching 4 4 2023-04-06 14:49:29.887
+!MESSAGE Xbootclasspath option have been removed as not supported beyond Java 8.
+
+!ENTRY org.eclipse.jdt.launching 4 4 2023-04-06 14:49:38.656
+!MESSAGE Xbootclasspath option have been removed as not supported beyond Java 8.
+
+!ENTRY org.eclipse.jdt.launching 4 4 2023-04-06 14:51:28.208
+!MESSAGE Xbootclasspath option have been removed as not supported beyond Java 8.
+
+!ENTRY org.eclipse.jdt.launching 4 4 2023-04-06 14:55:57.683
+!MESSAGE Xbootclasspath option have been removed as not supported beyond Java 8.
+
+!ENTRY org.eclipse.jdt.launching 4 4 2023-04-06 14:58:43.000
+!MESSAGE Xbootclasspath option have been removed as not supported beyond Java 8.
+
+!ENTRY org.eclipse.jdt.launching 4 4 2023-04-06 15:00:04.745
+!MESSAGE Xbootclasspath option have been removed as not supported beyond Java 8.
+
+!ENTRY org.eclipse.jdt.launching 4 4 2023-04-06 15:02:34.560
+!MESSAGE Xbootclasspath option have been removed as not supported beyond Java 8.
+
+!ENTRY org.eclipse.jdt.launching 4 4 2023-04-06 15:04:02.464
+!MESSAGE Xbootclasspath option have been removed as not supported beyond Java 8.
+
+!ENTRY org.eclipse.jdt.launching 4 4 2023-04-06 15:04:10.069
+!MESSAGE Xbootclasspath option have been removed as not supported beyond Java 8.
+
+!ENTRY org.eclipse.jdt.launching 4 4 2023-04-06 15:12:39.135
+!MESSAGE Xbootclasspath option have been removed as not supported beyond Java 8.
+
+!ENTRY org.eclipse.jdt.launching 4 4 2023-04-06 15:12:50.736
+!MESSAGE Xbootclasspath option have been removed as not supported beyond Java 8.
+
+!ENTRY org.eclipse.jdt.launching 4 4 2023-04-06 15:14:05.802
+!MESSAGE Xbootclasspath option have been removed as not supported beyond Java 8.
+
+!ENTRY org.eclipse.jdt.launching 4 4 2023-04-06 15:17:32.128
+!MESSAGE Xbootclasspath option have been removed as not supported beyond Java 8.
+
+!ENTRY org.eclipse.jdt.launching 4 4 2023-04-06 15:17:52.143
+!MESSAGE Xbootclasspath option have been removed as not supported beyond Java 8.
+
+!ENTRY org.eclipse.jdt.launching 4 4 2023-04-06 15:18:43.668
+!MESSAGE Xbootclasspath option have been removed as not supported beyond Java 8.
+
+!ENTRY org.eclipse.jdt.launching 4 4 2023-04-06 15:19:20.070
+!MESSAGE Xbootclasspath option have been removed as not supported beyond Java 8.
+
+!ENTRY org.eclipse.jdt.launching 4 4 2023-04-06 15:20:35.868
+!MESSAGE Xbootclasspath option have been removed as not supported beyond Java 8.
+
+!ENTRY org.eclipse.jdt.launching 4 4 2023-04-06 15:21:39.999
+!MESSAGE Xbootclasspath option have been removed as not supported beyond Java 8.
+
+!ENTRY org.eclipse.jdt.launching 4 4 2023-04-06 15:35:30.886
+!MESSAGE Xbootclasspath option have been removed as not supported beyond Java 8.
+
+!ENTRY org.eclipse.jdt.launching 4 4 2023-04-06 15:35:46.617
+!MESSAGE Xbootclasspath option have been removed as not supported beyond Java 8.
+
+!ENTRY org.eclipse.jdt.launching 4 4 2023-04-06 15:41:36.775
+!MESSAGE Xbootclasspath option have been removed as not supported beyond Java 8.
+
+!ENTRY org.eclipse.jdt.launching 4 4 2023-04-06 15:42:40.653
+!MESSAGE Xbootclasspath option have been removed as not supported beyond Java 8.
+
+!ENTRY org.eclipse.jdt.launching 4 4 2023-04-06 15:44:07.723
+!MESSAGE Xbootclasspath option have been removed as not supported beyond Java 8.
+
+!ENTRY org.eclipse.jdt.launching 4 4 2023-04-06 15:44:31.738
+!MESSAGE Xbootclasspath option have been removed as not supported beyond Java 8.
+
+!ENTRY org.eclipse.jdt.launching 4 4 2023-04-06 15:44:40.042
+!MESSAGE Xbootclasspath option have been removed as not supported beyond Java 8.
+
+!ENTRY org.eclipse.jdt.launching 4 4 2023-04-06 15:46:58.028
+!MESSAGE Xbootclasspath option have been removed as not supported beyond Java 8.
+
+!ENTRY org.eclipse.jdt.launching 4 4 2023-04-06 16:09:13.980
+!MESSAGE Xbootclasspath option have been removed as not supported beyond Java 8.
+
+!ENTRY org.eclipse.jdt.launching 4 4 2023-04-06 16:09:56.286
+!MESSAGE Xbootclasspath option have been removed as not supported beyond Java 8.
+
+!ENTRY org.eclipse.jdt.launching 4 4 2023-04-06 16:13:21.396
+!MESSAGE Xbootclasspath option have been removed as not supported beyond Java 8.
+
+!ENTRY org.eclipse.jdt.launching 4 4 2023-04-06 16:14:49.832
+!MESSAGE Xbootclasspath option have been removed as not supported beyond Java 8.
+
+!ENTRY org.eclipse.jdt.launching 4 4 2023-04-06 16:15:51.169
+!MESSAGE Xbootclasspath option have been removed as not supported beyond Java 8.
+
+!ENTRY org.eclipse.jdt.launching 4 4 2023-04-06 16:16:30.134
+!MESSAGE Xbootclasspath option have been removed as not supported beyond Java 8.
+
+!ENTRY org.eclipse.jdt.launching 4 4 2023-04-06 16:18:03.286
+!MESSAGE Xbootclasspath option have been removed as not supported beyond Java 8.
+
+!ENTRY org.eclipse.jdt.launching 4 4 2023-04-06 16:18:19.870
+!MESSAGE Xbootclasspath option have been removed as not supported beyond Java 8.
+
+!ENTRY org.eclipse.jdt.launching 4 4 2023-04-06 16:19:26.073
+!MESSAGE Xbootclasspath option have been removed as not supported beyond Java 8.
+
+!ENTRY org.eclipse.jdt.launching 4 4 2023-04-06 16:20:15.316
+!MESSAGE Xbootclasspath option have been removed as not supported beyond Java 8.
+
+!ENTRY org.eclipse.jdt.launching 4 4 2023-04-06 16:22:32.887
+!MESSAGE Xbootclasspath option have been removed as not supported beyond Java 8.
+
+!ENTRY org.eclipse.jdt.launching 4 4 2023-04-06 16:25:58.748
+!MESSAGE Xbootclasspath option have been removed as not supported beyond Java 8.
+
+!ENTRY org.eclipse.jdt.launching 4 4 2023-04-06 16:26:11.208
+!MESSAGE Xbootclasspath option have been removed as not supported beyond Java 8.
+
+!ENTRY org.eclipse.jdt.launching 4 4 2023-04-06 16:27:00.905
+!MESSAGE Xbootclasspath option have been removed as not supported beyond Java 8.
+
+!ENTRY org.eclipse.ui.ide 4 4 2023-04-06 17:33:53.829
+!MESSAGE Problems saving workspace
+
+!ENTRY org.eclipse.ui.ide 2 1 2023-04-06 17:33:53.830
+!MESSAGE Problems occurred while trying to save the state of the workbench.
+!SUBENTRY 1 org.eclipse.core.resources 2 234 2023-04-06 17:33:53.830
+!MESSAGE The project description file (.project) for 'javase_pp' was missing.  This file contains important information about the project.  A new project description file has been created, but some information about the project may have been lost.
+
+!ENTRY org.eclipse.core.resources 2 10035 2023-04-06 17:33:55.018
+!MESSAGE The workspace will exit with unsaved changes in this session.

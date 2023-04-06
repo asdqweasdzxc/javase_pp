@@ -13,7 +13,7 @@ public class CategoryDAO {
 	
 	DBManager dbManager=DBManager.getInstance();
 	
-	//카테고리 1건 등록
+	//移댄뀒怨좊━ 1嫄� �벑濡�
 	public int insert(Category category) {
 		Connection con = null;
 		PreparedStatement pstmt=null;
@@ -29,7 +29,7 @@ public class CategoryDAO {
 			//pstmt.setInt(1, category.getCategory_idx());
 			pstmt.setString(1, category.getCategory_name());
 			
-			result=pstmt.executeUpdate(); //DML 수행
+			result=pstmt.executeUpdate(); //DML �닔�뻾
 		} catch (SQLException e) {
 			e.printStackTrace();
 		} finally {
@@ -38,7 +38,7 @@ public class CategoryDAO {
 		return result;
 	}
 	
-	//insert 성공 시 seq의 currval 가져오기
+	//insert �꽦怨� �떆 seq�쓽 currval 媛��졇�삤湲�
 	public int getSequence() {
 		int currval = 0;
 		Connection con=null;
@@ -51,7 +51,7 @@ public class CategoryDAO {
 			pstmt=con.prepareStatement(sql);
 			rs=pstmt.executeQuery();
 			if(rs.next()) {
-				System.out.println("씨발");
+				System.out.println("�뵪諛�");
 				Category category = new Category();
 				category.setCategory_idx(rs.getInt("currval"));
 				currval= category.getCategory_idx();
@@ -64,7 +64,6 @@ public class CategoryDAO {
 		return currval;
 	}
 	
-	//모두 가져오기
 	public List selectAll() {
 		Connection con=null;
 		PreparedStatement pstmt=null;
@@ -130,7 +129,7 @@ public class CategoryDAO {
 		return category;
 	}
 	
-	//레코드 1건 삭제
+	//�젅肄붾뱶 1嫄� �궘�젣
 	public int delete(int category_idx) {
 		Connection con=null;
 		PreparedStatement pstmt=null;
@@ -152,7 +151,7 @@ public class CategoryDAO {
 		return result;
 	}
 	
-	//레코드 1건 수정
+	//�젅肄붾뱶 1嫄� �닔�젙
 	public int update(Category category) {
 		Connection con=null;
 		PreparedStatement pstmt=null;
@@ -171,7 +170,7 @@ public class CategoryDAO {
 			pstmt.setString(1, category.getCategory_name());
 			pstmt.setInt(2, category.getCategory_idx());
 		
-			result=pstmt.executeUpdate(); //쿼리 수행
+			result=pstmt.executeUpdate(); //荑쇰━ �닔�뻾
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}finally {

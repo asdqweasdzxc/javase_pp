@@ -55,7 +55,6 @@ public class ProductDAO {
 				pstmt=con.prepareStatement(sql);
 				rs=pstmt.executeQuery();
 				if(rs.next()) {
-					System.out.println("씨발");
 					Product product = new Product();
 					product.setProduct_idx(rs.getInt("currval"));
 					currval= product.getProduct_idx();

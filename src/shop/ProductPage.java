@@ -182,6 +182,7 @@ public class ProductPage extends Page{
 						p_inventory.remove(itemList.get(i));
 						p_inventory.updateUI();
 						itemList.get(i).row.flag=false;
+						itemList.remove(i);
 					}
 				}
 			}
@@ -193,6 +194,7 @@ public class ProductPage extends Page{
 						p_inventory.remove(itemList.get(i));
 						p_inventory.updateUI();
 						itemList.get(i).row.flag=false;
+						itemList.remove(i);
 					}
 				}
 			}
@@ -204,6 +206,7 @@ public class ProductPage extends Page{
 				for(int i=0;i<start;i++) {
 					adminMain.paymentPage.p_list.remove(itemList.get(i));
 				}
+				adminMain.paymentPage.p_total.removeAll();
 				for(int i=start;i<itemList.size();i++) {
 					Item item = itemList.get(i);
 					System.out.println("아이템리스트"+itemList.size());
